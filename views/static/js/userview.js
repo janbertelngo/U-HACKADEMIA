@@ -1,5 +1,4 @@
 function populateFinding(jsonArray) {
-
     var json = jsonArray;
     console.log(json)
     for(var i = 0 ; i < json.length; i++) {
