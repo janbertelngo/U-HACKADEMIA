@@ -56,7 +56,9 @@ app.post(
     console.log("AG"+tempPath)
     console.log("A"+targetPath)
 
-    if (path.extname(req.file.originalname).toLowerCase() === ".png") {
+    if (path.extname(req.file.originalname).toLowerCase() === ".png" 
+        || path.extname(req.file.originalname).toLowerCase() === ".jpg" 
+        || path.extname(req.file.originalname).toLowerCase() === ".jpeg") {
       fs.rename(tempPath, targetPath, err => {
         if (err) return handleError(err, res);
 
@@ -77,4 +79,14 @@ app.post(
     }
   }
 );
+
+    app.get("/records", function(req, res){
+        if(req.session.type == "patient") {
+            recordService.getAllRecords(req.session.uid, function(patient){
+                console.log(patient)
+                console.log(patient.data)
+                res.send(patient.data)
+            })
+        }
+    })
 }

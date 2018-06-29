@@ -23,9 +23,9 @@ module.exports.createRecord = function (data, next) {
     })
 }
 
-module.exports.getAllRecords = function (next) {
+module.exports.getAllRecords = function (data, next) {
     let db = database.getDBInstance()
-    db.all(GET_PATIENT_RECORDS_QUERY, function(error, rows) {
+    db.all(GET_PATIENT_RECORDS_QUERY, [data],function(error, rows) {
         if (error) { 
             console.log("err")
             return next({status: 'error', data: error})

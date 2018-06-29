@@ -4,7 +4,7 @@
     "static": "/views/static",
     "key": "CHANGEKEYSOON",
     "database": {
-        "location": "/Users/neilsongardose/",
+        "location": "/UHACK",
         "name": "uhack.db"
     },
     "ubp" : {
