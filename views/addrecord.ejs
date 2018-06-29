@@ -20,12 +20,25 @@
         <!-- FILES -->
     </head>
     <body> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/img/icon.png" width="30" height="30" alt="">
+            </a>
+            
+
+            
+            <a class="nav-link" href="#">
+                Logout
+            </a>
+
+            
+        </nav>
         <div class="container-fluid">
-            <div class="row justify-content-center align-items-center main-panel">
-                <div class="col-md-4 page-content">
+            <div class="row justify-content-center main-panel">
+                <div class="col-md-5 page-content">
                     <h1>Add Record</h1>
                     <hr>
-                    <form class=" signin h-100" action="upload" method = "post" enctype="multipart/form-data" id="submitRecord">
+                    <form class=" signin" action="upload" method = "post" enctype="multipart/form-data" id="submitRecord">
                         <div class="form-group">
                             <label for="login">Patient Name</label>
                             <input type="text" class="form-control" id="login" placeholder="First Name" name="firstName" style="margin-bottom: 5px">
