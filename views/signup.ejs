@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/signup.css">
+        <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/signup.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -50,25 +50,25 @@
                                     <label for="login">Name</label>
                                     <div class="row">
                                         <div class="col">
-                                            <input type="text" name="firstName" class="form-control" placeholder="First name">
+                                            <input type="text" name="firstName" class="form-control" placeholder="First name" required>
                                         </div>
                                         <div class="col">
-                                            <input type="text" name="lastName" class="form-control" placeholder="Last name">
+                                            <input type="text" name="lastName" class="form-control" placeholder="Last name" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="username">Username</label>
-                                    <input type="text" name="username" class="form-control" id="username" placeholder="johndoe">
+                                    <input type="text" name="username" class="form-control" id="username" placeholder="johndoe" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@example.com">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@example.com" required>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-5">
                                         <label for="inputMonth">Month</label>
-                                        <select name="month"id="inputMonth" class="form-control">
+                                        <select name="month"id="inputMonth" class="form-control" required>
                                             <option selected>January</option>
                                             <option>February</option>
                                             <option>March</option>
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="inputDay">Day</label>
-                                        <select name="day" id="inputDay" class="form-control">
+                                        <select name="day" id="inputDay" class="form-control" required>
                                             <option selected value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputYear">Year</label>
-                                        <select name="year" id="inputYear" class="form-control">
+                                        <select name="year" id="inputYear" class="form-control" required>
                                             <option value="1918">1918</option>
                                             <option value="1919">1919</option>
                                             <option value="1920">1920</option>
@@ -229,8 +229,7 @@
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <label for="inputYear">Gender</label>
-                                        <select name="sex" id="inputYear" class="form-control">
-                                            <option selected>Choose...</option>
+                                        <select name="sex" id="inputYear" class="form-control" required>
                                             <option>Male</option>
                                             <option>Female</option>
                                         </select>
@@ -238,16 +237,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" >
+                                    <input type="password" name="password" class="form-control" id="password" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="confirm-password">Confirm Password</label>
-                                    <input type="password" name="confirmpassword" class="form-control" id="confirm-password" >
+                                    <input type="password" name="confirmpassword" class="form-control" id="confirm-password" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" id="register"class="form-control btn btn-primary" value="Register">
                                 </div>
-                                <input type="hidden" name="type" value="lab">
+                                <input type="hidden" name="type" value="patient">
                             </form> 
 
                         </div>
@@ -272,25 +271,25 @@
                                             <label for="login">Name</label>
                                             <div class="row">
                                                 <div class="col">
-                                                    <input type="text" name="firstName" class="form-control" placeholder="First name">
+                                                    <input type="text" name="firstName" class="form-control" placeholder="First name" required>
                                                 </div>
                                                 <div class="col">
-                                                    <input type="text" name="lastName" class="form-control" placeholder="Last name">
+                                                    <input type="text" name="lastName" class="form-control" placeholder="Last name" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="username">Username</label>
-                                            <input type="text" name="username" class="form-control" id="username" placeholder="johndoe">
+                                            <input type="text" name="username" class="form-control" id="username" placeholder="johndoe" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@example.com">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@example.com" required>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-5">
                                                 <label for="inputMonth">Month</label>
-                                                <select name="month" id="inputMonth" class="form-control">
+                                                <select name="month" id="inputMonth" class="form-control" required>
                                                     <option selected>January</option>
                                                     <option>February</option>
                                                     <option>March</option>
@@ -307,7 +306,7 @@
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputDay">Day</label>
-                                                <select name="day" id="inputDay" class="form-control">
+                                                <select name="day" id="inputDay" class="form-control" required>
                                                     <option selected value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -343,7 +342,7 @@
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="inputYear">Year</label>
-                                                <select name="year" id="inputYear" class="form-control">
+                                                <select name="year" id="inputYear" class="form-control" required>
                                                     <option value="1918">1918</option>
                                                     <option value="1919">1919</option>
                                                     <option value="1920">1920</option>
@@ -451,8 +450,7 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <label for="inputYear">Gender</label>
-                                                <select name="sex" id="inputYear" class="form-control">
-                                                    <option selected>Choose...</option>
+                                                <select name="sex" id="inputYear" class="form-control" required>
                                                     <option>Male</option>
                                                     <option>Female</option>
                                                 </select>
@@ -460,15 +458,15 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="workplace">Workplace</label>
-                                            <input type="text" name="workplace" class="form-control" id="workplace" >
+                                            <input type="text" name="workplace" class="form-control" id="workplace" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">Password</label>
-                                            <input type="password" name="password" class="form-control" id="password" >
+                                            <input type="password" name="password" class="form-control" id="password" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="confirm-password">Confirm Password</label>
-                                            <input type="password" name="confirmpassword" class="form-control" id="confirm-password" >
+                                            <input type="password" name="confirmpassword" class="form-control" id="confirm-password" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" id="register"class="form-control btn btn-primary" value="Register">
@@ -495,25 +493,25 @@
                                             <label for="login">Name</label>
                                             <div class="row">
                                                 <div class="col">
-                                                    <input type="text" name="firstName" class="form-control" placeholder="First name">
+                                                    <input type="text" name="firstName" class="form-control" placeholder="First name" required>
                                                 </div>
                                                 <div class="col">
-                                                    <input type="text" name="lastName" class="form-control" placeholder="Last name">
+                                                    <input type="text" name="lastName" class="form-control" placeholder="Last name" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="username">Username</label>
-                                            <input type="text" name="username" class="form-control" id="username" placeholder="johndoe">
+                                            <input type="text" name="username" class="form-control" id="username" placeholder="johndoe" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@example.com">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@example.com" required>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-5">
                                                 <label for="inputMonth">Month</label>
-                                                <select id="inputMonth" name="month" class="form-control">
+                                                <select id="inputMonth" name="month" class="form-control" required>
                                                     <option selected>January</option>
                                                     <option>February</option>
                                                     <option>March</option>
@@ -530,7 +528,7 @@
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputDay">Day</label>
-                                                <select id="inputDay" name="day" class="form-control">
+                                                <select id="inputDay" name="day" class="form-control" required>
                                                     <option selected value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -566,7 +564,7 @@
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="inputYear">Year</label>
-                                                <select name="year" id="inputYear" class="form-control">
+                                                <select name="year" id="inputYear" class="form-control" required>
                                                     <option value="1918">1918</option>
                                                     <option value="1919">1919</option>
                                                     <option value="1920">1920</option>
@@ -674,8 +672,8 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <label for="inputYear">Gender</label>
-                                                <select name="sex" id="inputYear" class="form-control">
-                                                    <option selected>Choose...</option>
+                                                <select name="sex" id="inputYear" class="form-control" required>
+
                                                     <option>Male</option>
                                                     <option>Female</option>
                                                 </select>
@@ -683,15 +681,15 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="workplace">Workplace</label>
-                                            <input type="text" name="workplace" class="form-control" id="workplace" >
+                                            <input type="text" name="workplace" class="form-control" id="workplace" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="password">Password</label>
-                                            <input type="password" name="password" class="form-control" id="password" >
+                                            <input type="password" name="password" class="form-control" id="password" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="confirm-password">Confirm Password</label>
-                                            <input type="password" name="confirmpassword" class="form-control" id="confirm-password" >
+                                            <input type="password" name="confirmpassword" class="form-control" id="confirm-password" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" id="register"class="form-control btn btn-primary" value="Register">
