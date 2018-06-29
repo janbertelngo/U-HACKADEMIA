@@ -1,0 +1,53 @@
+:root {
+    --theme-orange: #FF9933;
+    --theme-blue: #333366;
+    --theme-gray: #fAfAfA;
+    --transition-time: 0.3s;
+}
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    
+    font-family: Open Sans, Montserrat, Raleway, sans-serif;
+
+}
+
+.main-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.left {
+    box-shadow: 0px 0px 10px black inset;
+    /* background: linear-gradient(rgb(0,0,0,.8),rgba(0,0,0,.8)), url('../img/bg.png'); */
+    background-color: linear-gradient( #9e9e9e, #454545, url('../img/bg.png'));;
+
+    background-image: url('../img/bg.png');
+    color: white;
+}
+
+.left h1 {
+    text-align: center;
+}
+.right-content {
+    height: 70vh;
+
+}
+
+.signin {
+
+    padding: 15px;
+}
+
+
+
