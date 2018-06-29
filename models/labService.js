@@ -4,14 +4,15 @@ let GET_LAB_QUERY = "SELECT * FROM LabAccount"
 
 let GET_ONE_LAB_QUERY = "SELECT * FROM LabAccount WHERE lab_id = ?"
 
-let INSERT_LAB_QUERY = "INSERT INTO LabAccount " +
-                    "(firstName, lastName, username, password, + "
-                    + "sex, type) VALUES (?, ?, ?, ?, ?, ?)"
+let INSERT_LAB_QUERY = "INSERT INTO DoctorAccount " +
+                    "(firstName, lastName, username, password, birthdate, + "
+                    + "sex, workplace, type) VALUES (?, ?, ?, ?, ?, ?, ?)"	
 
 module.exports.createLab = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_LAB_QUERY, 
-        [data.firstName, data.lastName, data.username, data.password, data.sex, data.type], 
+        [data.firstName, data.lastName, data.username, data.password, data.birthdate,
+            data.sex, data.workplace, data.type], 
         function(error) {
         if (error) 
             return next({status: 'error', data: error})
