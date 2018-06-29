@@ -1,0 +1,196 @@
+{
+    "AccountDoctor": {
+        "columns": [
+            {
+                "name": "doctor_id",
+                "type": "INTEGER",
+                "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "firstName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "lastName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "username",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "password",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "birthdate",
+                "type": "DATE",
+                "constraint": ""
+            },
+            {
+                "name": "sex",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "workplace",
+                "type": "TEXT",
+                "constraint": ""
+            }
+        ]
+    },
+    "AccountPatient": {
+        "columns": [
+            {
+                "name": "patient_id",
+                "type": "INTEGER",
+                "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "firstName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "lastName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "username",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "password",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "birthdate",
+                "type": "DATE",
+                "constraint": ""
+            },
+            {
+                "name": "sex",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "pin",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "bloodType",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "accountNumber",
+                "type": "INTEGER",
+                "constraint": ""
+            }
+        ]
+    },
+    "AccountLab": {
+        "columns": [
+            {
+                "name": "lab_id",
+                "type": "INTEGER",
+                "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "firstName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "lastName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "username",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "password",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "birthdate",
+                "type": "DATE",
+                "constraint": ""
+            },
+            {
+                "name": "sex",
+                "type": "TEXT",
+                "constraint": ""
+            }
+        ]
+    },
+    "LabRecord": {
+        "columns": [
+        {
+            "name": "lab_id",
+            "type": "INTEGER",
+            "constraint": ""
+        },
+        {
+            "name": "record_id",
+            "type": "INTEGER",
+            "constraint": ""
+        }
+        ]
+    },
+    "PatientRecord": {
+        "columns": [
+        {
+            "name": "patient_id",
+            "type": "INTEGER",
+            "constraint": ""
+        },
+        {
+            "name": "record_id",
+            "type": "INTEGER",
+            "constraint": ""
+        }
+        ]
+    },
+    "Record": {
+        "columns": [
+            {
+                "name": "record_id",
+                "type": "INTEGER",
+                "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "attachment",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "findings",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "date",
+                "type": "DATE",
+                "constraint": ""
+            }
+        ]
+    }
+}

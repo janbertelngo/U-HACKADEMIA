@@ -31,14 +31,12 @@ function createTableQuery (table, name) {
 
 
 
-function createTable(name, next) {
+function createTable(name) {
     let db = getDBInstance()
     db.run(createTableQuery(tables[name], name), function(error, row) {
         if (error) {
             console.log("[" + (new Date()).toLocaleString() + "] create table" +  error)
-            return next(false)
         }
-        return next(true)
     })
     //db.close()
 }
