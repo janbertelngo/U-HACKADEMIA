@@ -6,7 +6,7 @@ let path = require('path')
 var ejs = require('ejs')
 let fs = require('fs')
 let values = require('./configuration/config')
-// let db = require('./configuration/database')
+let db = require('./configuration/database')
 
 let app = express()
 let appSession = session({
