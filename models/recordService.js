@@ -9,13 +9,13 @@ let GET_ONE_PATIENT_RECORD_QUERY = "SELECT * FROM Record as r, AccountPatient AS
 " AND ap.patient_id = r.patient_id AND r.record_id = ?"
 
 let INSERT_RECORD_QUERY = "INSERT INTO Record " +
-                    "(patient_id, type, attachment, findings, date) " +
+                    "(patient_id, testType, attachment, findings, date) " +
                     "VALUES (?, ?, ?, ?, ?)"
 
 module.exports.createRecord = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_RECORD_QUERY, 
-        [data.patient_id, data.type, data.attachment, data.findings, data.date], 
+        [data.patient_id, data.testType, data.attachment, data.findings, data.date], 
         function(error) {
         if (error) 
             return next({status: 'error', data: error})

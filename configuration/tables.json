@@ -169,7 +169,7 @@
                 "constraint": ""
             },
             {
-                "name": "type",
+                "name": "testType",
                 "type": "TEXT",
                 "constraint": ""
             },
