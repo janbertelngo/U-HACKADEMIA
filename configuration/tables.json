@@ -7,6 +7,11 @@
                 "constraint": "PRIMARY KEY"
             },
             {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
                 "name": "firstName",
                 "type": "TEXT",
                 "constraint": ""
@@ -49,6 +54,11 @@
                 "name": "patient_id",
                 "type": "INTEGER",
                 "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
             },
             {
                 "name": "firstName",
@@ -105,6 +115,11 @@
                 "constraint": "PRIMARY KEY"
             },
             {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
                 "name": "firstName",
                 "type": "TEXT",
                 "constraint": ""
@@ -136,21 +151,7 @@
             }
         ]
     },
-    "LabRecord": {
-        "columns": [
-        {
-            "name": "lab_id",
-            "type": "INTEGER",
-            "constraint": ""
-        },
-        {
-            "name": "record_id",
-            "type": "INTEGER",
-            "constraint": ""
-        }
-        ]
-    },
-    "PatientRecord": {
+    "PatientRecordLab": {
         "columns": [
         {
             "name": "patient_id",
@@ -159,6 +160,11 @@
         },
         {
             "name": "record_id",
+            "type": "INTEGER",
+            "constraint": ""
+        },
+        {
+            "name": "lab_id",
             "type": "INTEGER",
             "constraint": ""
         }
