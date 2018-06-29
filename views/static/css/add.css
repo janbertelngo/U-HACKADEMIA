@@ -1,15 +1,18 @@
 html, body {
-    background-color: #F4F5E7;
+
+    background: linear-gradient(rgb(0,0,0,.6),rgba(0,0,0,.6)), url('../img/bg.png') no-repeat center center fixed;
     height: 100%;
 }
 
+
 .main-panel {
-    height: 100vh;
+
+    padding-top: 20px;
 }
+
 
 .form-control {
     border: 1px solid #6D8CA0;
-    height: 40px;
     border-radius: 5px;
 }
 
@@ -18,4 +21,9 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.6);
     padding: 15px;
+}
+
+
+.navbar {
+    box-shadow: 0 3px 5px -3px rgba(0,0,0,.5);
 }
