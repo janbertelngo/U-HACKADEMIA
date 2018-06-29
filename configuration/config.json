@@ -1,0 +1,10 @@
+{
+    "port": 5000,
+    "views": "/views/",
+    "static": "/views/static",
+    "key": "CHANGEKEYSOON",
+    "database": {
+        "location": "C:/UHACK",
+        "name": "uhack.db"
+    }
+}
