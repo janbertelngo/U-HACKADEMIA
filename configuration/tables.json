@@ -7,6 +7,11 @@
                 "constraint": "PRIMARY KEY"
             },
             {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
                 "name": "firstName",
                 "type": "TEXT",
                 "constraint": ""
@@ -49,6 +54,11 @@
                 "name": "patient_id",
                 "type": "INTEGER",
                 "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
             },
             {
                 "name": "firstName",
@@ -105,6 +115,11 @@
                 "constraint": "PRIMARY KEY"
             },
             {
+                "name": "type",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
                 "name": "firstName",
                 "type": "TEXT",
                 "constraint": ""
@@ -133,35 +148,12 @@
                 "name": "sex",
                 "type": "TEXT",
                 "constraint": ""
+            },
+            {
+                "name": "workplace",
+                "type": "TEXT",
+                "constraint": ""
             }
-        ]
-    },
-    "LabRecord": {
-        "columns": [
-        {
-            "name": "lab_id",
-            "type": "INTEGER",
-            "constraint": ""
-        },
-        {
-            "name": "record_id",
-            "type": "INTEGER",
-            "constraint": ""
-        }
-        ]
-    },
-    "PatientRecord": {
-        "columns": [
-        {
-            "name": "patient_id",
-            "type": "INTEGER",
-            "constraint": ""
-        },
-        {
-            "name": "record_id",
-            "type": "INTEGER",
-            "constraint": ""
-        }
         ]
     },
     "Record": {
@@ -172,7 +164,12 @@
                 "constraint": "PRIMARY KEY"
             },
             {
-                "name": "type",
+                "name": "patient_id",
+                "type": "INTEGER",
+                "constraint": ""
+            },
+            {
+                "name": "testType",
                 "type": "TEXT",
                 "constraint": ""
             },

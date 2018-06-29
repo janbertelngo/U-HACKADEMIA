@@ -26,14 +26,18 @@
                     <div class="right-content col-md-8 flex-row">
                         <div class="col row justify-content-center">  
                             <h1>App Name</h1>
+                            <form method="post" enctype="multipart/form-data" action="/upload">
+                                <input type="file" name="file">
+                                <input type="submit" value="Submit">
+                            </form>
                         </div>
                         <hr>
                          <div class="row">
                             <div class="col">
                                 <form class=" signin h-100" action="login" method = "post">
                                     <div class="form-group">
-                                        <label for="login">Email</label>
-                                        <input type="text" class="form-control" id="login" placeholder="johndoe@example.com" name="email">
+                                        <label for="login">Username</label>
+                                        <input type="text" class="form-control" id="login" placeholder="johndoe" name="Username">
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label>
@@ -59,44 +63,3 @@
         <script src="js/index.js"></script>
     </body>
 </html>
-
-<!-- <form class="border border-top-0 signin h-100">
-        <div class="form-group">
-            <label for="login">Name</label>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col">
-                    <input type="email" class="form-control" placeholder="Last name">
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="johndoe@example.com">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-5">
-                <label for="inputMonth">Month</label>
-                <select id="inputMonth" class="form-control">
-                    <option selected>Choose...</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputDay">Day</label>
-                <select id="inputDay" class="form-control">
-                    <option selected>Choose...</option>
-                </select>
-            </div>
-            <div class="form-group col-md-4">
-                <label for="inputYear">Year</label>
-                <select id="inputYear" class="form-control">
-                    <option selected>Choose...</option>
-                </select>
-            </div>
-            </div>
-        <div class="form-group">
-            
-        </div>
-    </form> -->
