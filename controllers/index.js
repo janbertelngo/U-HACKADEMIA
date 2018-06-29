@@ -5,4 +5,13 @@ module.exports.controller = function(app) {
     app.get('/signup', function(req, res) {
         res.render('signup')
     });
+    app.get('/patient', function(req, res) {
+        res.render('userview')
+    });
+    app.get('/patient/1', function(req, res) {
+        res.render('userview')
+    });
+    app.get('/test', function(req, res) {
+        res.render('test')
+    });
 }
