@@ -151,31 +151,17 @@
             }
         ]
     },
-    "PatientRecordLab": {
-        "columns": [
-        {
-            "name": "patient_id",
-            "type": "INTEGER",
-            "constraint": ""
-        },
-        {
-            "name": "record_id",
-            "type": "INTEGER",
-            "constraint": ""
-        },
-        {
-            "name": "lab_id",
-            "type": "INTEGER",
-            "constraint": ""
-        }
-        ]
-    },
     "Record": {
         "columns": [
             {
                 "name": "record_id",
                 "type": "INTEGER",
                 "constraint": "PRIMARY KEY"
+            },
+            {
+                "name": "patient_id",
+                "type": "INTEGER",
+                "constraint": ""
             },
             {
                 "name": "type",
