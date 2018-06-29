@@ -1,0 +1,21 @@
+html, body {
+    background-color: #F4F5E7;
+    height: 100%;
+}
+
+.main-panel {
+    height: 100vh;
+}
+
+.form-control {
+    border: 1px solid #6D8CA0;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.page-content {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    padding: 15px;
+}
