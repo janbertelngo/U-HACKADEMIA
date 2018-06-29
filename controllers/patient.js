@@ -8,7 +8,7 @@ module.exports.controller = function (app) {
             lastName: req.body.lastName,
             username: req.body.username,
             password: req.body.password,
-            birthdate: req.body.birthdate,
+            birthdate: req.body.year+"-"+req.body.month+"-"+req.body.day,
             sex: req.body.sex,
             bloodType: req.body.bloodType,
             accountNumber: req.body.accountNumber
@@ -16,7 +16,7 @@ module.exports.controller = function (app) {
 
         patientService.createPatient(patient, function(data){
             console.log(data)
-            res.redirect('index')
+            res.redirect('/')
         })
     })
 }

@@ -1,4 +1,5 @@
 function populateFinding(jsonArray) {
+    
     var json = jsonArray;
     for(var i = 0 ; i < json.length; i++) {
         var item = json[i];

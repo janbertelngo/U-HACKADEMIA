@@ -8,14 +8,14 @@ module.exports.controller = function (app) {
             lastName: req.body.lastName,
             username: req.body.username,
             password: req.body.password,
-            birthdate: req.body.birthdate,
+            birthdate: req.body.year+"-"+req.body.month+"-"+req.body.day,
             sex: req.body.sex,
             workplace: req.body.workplace
         }
 
         labService.createLab(lab, function(data){
             console.log(data)
-            res.redirect('index')
+            res.redirect('/')
         })
     })
 }
