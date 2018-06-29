@@ -12,7 +12,7 @@ let INSERT_RECORD_QUERY = "INSERT INTO Record " +
                     "(patient_id, type, attachment, findings, date) " +
                     "VALUES (?, ?, ?, ?, ?)"
 
-module.exports.createLab = function (data, next) {
+module.exports.createRecord = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_RECORD_QUERY, 
         [data.patient_id, data.type, data.attachment, data.findings, data.date], 

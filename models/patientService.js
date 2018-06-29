@@ -12,7 +12,7 @@ module.exports.createPatient = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_PATIENT_QUERY, 
         [data.firstName, data.lastName, data.username, data.password,
-            data.birthdate, data.sex, data.bloodType, data.accountNumber, "patients"], 
+            data.birthdate, data.sex, data.bloodType, data.accountNumber, data.type], 
         function(error) {
         if (error) 
             return next({status: 'error', data: error})

@@ -11,7 +11,7 @@ let INSERT_LAB_QUERY = "INSERT INTO LabAccount " +
 module.exports.createLab = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_LAB_QUERY, 
-        [data.firstName, data.lastName, data.username, data.password, data.sex, "labs"], 
+        [data.firstName, data.lastName, data.username, data.password, data.sex, data.type], 
         function(error) {
         if (error) 
             return next({status: 'error', data: error})

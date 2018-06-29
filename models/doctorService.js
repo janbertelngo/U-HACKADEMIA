@@ -12,7 +12,7 @@ module.exports.createDoctor = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_DOCTOR_QUERY, 
         [data.firstName, data.lastName, data.username, data.password, data.birthdate,
-            data.sex, data.workplace, "doctors"], 
+            data.sex, data.workplace, data.type], 
         function(error) {
         if (error) 
             return next({status: 'error', data: error})
