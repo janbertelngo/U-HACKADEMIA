@@ -1,8 +1,8 @@
 {
-    "Account": {
-        "columns" :[
+    "AccountDoctor": {
+        "columns": [
             {
-                "name": "user_id",
+                "name": "doctor_id",
                 "type": "INTEGER",
                 "constraint": "PRIMARY KEY"
             },
@@ -35,15 +35,6 @@
                 "name": "sex",
                 "type": "TEXT",
                 "constraint": ""
-            }
-        ]
-    },
-    "AccountDoctor": {
-        "columns": [
-            {
-                "name": "doc_id",
-                "type": "INTEGER",
-                "constraint": "PRIMARY KEY"
             },
             {
                 "name": "workplace",
@@ -60,13 +51,33 @@
                 "constraint": "PRIMARY KEY"
             },
             {
+                "name": "firstName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "lastName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "username",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "password",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
                 "name": "birthdate",
                 "type": "DATE",
                 "constraint": ""
             },
             {
                 "name": "sex",
-                "type": "SRTING",
+                "type": "TEXT",
                 "constraint": ""
             },
             {
@@ -94,7 +105,32 @@
                 "constraint": "PRIMARY KEY"
             },
             {
-                "name": "pin",
+                "name": "firstName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "lastName",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "username",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "password",
+                "type": "TEXT",
+                "constraint": ""
+            },
+            {
+                "name": "birthdate",
+                "type": "DATE",
+                "constraint": ""
+            },
+            {
+                "name": "sex",
                 "type": "TEXT",
                 "constraint": ""
             }
@@ -134,11 +170,6 @@
                 "name": "record_id",
                 "type": "INTEGER",
                 "constraint": "PRIMARY KEY"
-            },
-            {
-                "name": "patient_id",
-                "type": "INTEGER",
-                "constraint": ""
             },
             {
                 "name": "type",
