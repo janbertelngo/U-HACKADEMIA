@@ -1,0 +1,26 @@
+html,body {
+    height: 100%;
+
+}
+
+.page-content {
+    height: 80vh;
+
+    
+}
+
+.navbar {
+    background-color: white !important;
+}
+
+.input-field {
+    padding: 15px;
+}
+
+.form {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
