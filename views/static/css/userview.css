@@ -5,6 +5,7 @@
 html, body {
     padding: 0px;
     margin: 0px;
+    background: linear-gradient(rgb(0,0,0,.6),rgba(0,0,0,.6)), url('../img/bg.png') no-repeat center center fixed;
 }
 
 .profile-panel {
