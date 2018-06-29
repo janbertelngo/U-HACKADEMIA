@@ -148,6 +148,11 @@
                 "name": "sex",
                 "type": "TEXT",
                 "constraint": ""
+            },
+            {
+                "name": "workplace",
+                "type": "TEXT",
+                "constraint": ""
             }
         ]
     },
