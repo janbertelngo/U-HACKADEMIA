@@ -1,14 +1,18 @@
 let recordService = require('./../models/recordService')
 let patientService = require('./../models/patientService')
-module.exports.controller = function (app) {
 
+let path = require('path')
+
+let fs = require('fs')
+module.exports.controller = function (app) {
+    
     app.post('/record', function(req, res) {
+        console.log("HERE")
         var record = {
-            patient_id: req.body.patient_id,
             testType: req.body.testType,
             attachment: req.body.attachment,
             findings: req.body.findings,
-            date: req.body.year+"-"+req.body.month+"-"+req.body.day
+            date: req.body.date
         }
 
         patientService.getPatientId({
@@ -16,15 +20,61 @@ module.exports.controller = function (app) {
             lastName: req.body.lastName
         }, function (data){
             if(data.status == "success"){
-                record ["patient_id"] = data.data
+                record ["patient_id"] = data.data.patient_id
+                console.log(record)
                 recordService.createRecord(record, function(data){
                     console.log(data)
+                    return res.send(true)
                 })
             }
         })
-
-        recordService.createRecord(record, function(data){
-            console.log(data)
-        })
     })
+
+    const multer = require("multer");
+
+const handleError = (err, res) => {
+  res
+    .status(500)
+    .contentType("text/plain")
+    .end(err);
+};
+
+const upload = multer({
+  dest: "./../views/static/uploaded"
+  // you might also want to set some limits: https://github.com/expressjs/multer#limits
+});
+
+
+app.post(
+  "/upload",
+  upload.single("fileHA" /* name attribute of <file> element in your form */),
+  (req, res) => {
+    console.log("rr"+req.fileHA)
+    const tempPath = req.file.path;
+    const targetPath = path.join(__dirname, "./../views/static/uploaded/" + req.file.originalname);
+
+    console.log("AG"+tempPath)
+    console.log("A"+targetPath)
+
+    if (path.extname(req.file.originalname).toLowerCase() === ".png") {
+      fs.rename(tempPath, targetPath, err => {
+        if (err) return handleError(err, res);
+
+        res
+          .status(200)
+          .contentType("text/plain")
+          .end("File uploaded!");
+      });
+    } else {
+      fs.unlink(tempPath, err => {
+        if (err) return handleError(err, res);
+
+        res
+          .status(403)
+          .contentType("text/plain")
+          .end("Only .png files are allowed!");
+      });
+    }
+  }
+);
 }

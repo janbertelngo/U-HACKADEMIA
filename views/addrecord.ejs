@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="/css/add.css">
         <link href="/https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" type="application/javascript"> </script>
 
         <title> UHACK </title>
 
@@ -14,7 +15,7 @@
         <script src="lib/jquery-3.3.1.min.js" type="text/javascript"> </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/file.js" type="text/javascript"></script>
 
         <!-- FILES -->
     </head>
@@ -24,11 +25,11 @@
                 <div class="col-md-4 page-content">
                     <h1>Add Record</h1>
                     <hr>
-                    <form class=" signin h-100" action="upload" method = "post">
+                    <form class=" signin h-100" action="upload" method = "post" enctype="multipart/form-data" id="submitRecord">
                         <div class="form-group">
                             <label for="login">Patient Name</label>
                             <input type="text" class="form-control" id="login" placeholder="First Name" name="firstName" style="margin-bottom: 5px">
-                            <input type="text" class="form-control" id="login" placeholder="Last Name" name="lastName">
+                            <input type="text" class="form-control" id="login1" placeholder="Last Name" name="lastName">
                                     <label for="inputTestType" style="margin-top: 5px">Test Type</label>
                                     <select name = "testType" id="inputTestType" class="form-control">
                                         <option selected>X-ray</option>
@@ -201,17 +202,17 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group mb-3">
-                                    <input name="attachment" type="file" name="file">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                </div>
+                                    <input name="fileHA" type="file" id="fileAttach">
+                                <!-- <div class="custom-file">
+                                    <input type="hidden" class="custom-file-input" id="inputGroupFile02" name="attach">
+                                </div> -->
                                 <div class="input-group-append">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Findings</label>
-                            <input type="text" class="form-control" id="login" placeholder="Enter finding..." name="findings" style="margin-bottom: 10px">
+                            <input type="text" class="form-control" id="login2" placeholder="Enter finding..." name="findings" style="margin-bottom: 10px">
                             <input type="submit" class="form-control btn btn-primary" value="Submit">
                         </div>
                     </form>
