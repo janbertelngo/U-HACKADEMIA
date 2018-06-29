@@ -6,5 +6,12 @@
     "database": {
         "location": "C:/UHACK",
         "name": "uhack.db"
+    },
+    "ubp" : {
+        "url": "https://api-uat.unionbankph.com/partners/sb/convergent/v1/oauth2",
+        "client_id" : "12fc57e2-1e62-4b69-ac83-4f82c9f1e03e",
+        "client_secret" : "W2bY7lV6mO2xU2xT0bV3pW7uB7kS6mF7hL1oJ4nG6mO2dC2dT0",
+        "redirect_uri" : "https://ubpredirect.localtunnel.me/oauth/redirect",
+        "scope": "payments"
     }
 }
