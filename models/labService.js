@@ -1,12 +1,12 @@
 let database = require('./../configuration/database')
 
-let GET_LAB_QUERY = "SELECT * FROM LabAccount"
+let GET_LAB_QUERY = "SELECT * FROM AccountLab"
 
-let GET_ONE_LAB_QUERY = "SELECT * FROM LabAccount WHERE lab_id = ?"
+let GET_ONE_LAB_QUERY = "SELECT * FROM AccountLab WHERE lab_id = ?"
 
-let INSERT_LAB_QUERY = "INSERT INTO DoctorAccount " +
-                    "(firstName, lastName, username, password, birthdate, + "
-                    + "sex, workplace, type) VALUES (?, ?, ?, ?, ?, ?, ?)"	
+let INSERT_LAB_QUERY = "INSERT INTO AccountLab " +
+                    "(firstName, lastName, username, password, birthdate, "
+                    + "sex, workplace, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"	
 
 module.exports.createLab = function (data, next) {
     let db = database.getDBInstance()

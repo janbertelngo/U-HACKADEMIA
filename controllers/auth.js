@@ -1,10 +1,17 @@
+let accountService = require('./../models/accountService')
+
 module.exports.controller = function (app) {
 
     app.post('/login', function(req, res) {
-        let email = req.body.email
-        let password = req.body.password
+        let user = {
+            username: req.body.username,
+            password: req.body.password
+        }
+        console.log(user)
 
-        console.log(email)
-        console.log(password)
+        accountService.getAccount(user, function(data){
+            console.log(data)
+            res.send(data)
+        })
     })
 }

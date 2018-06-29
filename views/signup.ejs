@@ -45,7 +45,7 @@
                     </ul>
                     <div class="tab-content" id="roleContent">
                         <div class="tab-pane fade show active" id="patient" role="tabpanel" aria-labelledby="patient-tab">
-                            <form class=" signin">
+                            <form class=" signin" action="patient" method="post">
                                 <div class="form-group">
                                     <label for="login">Name</label>
                                     <div class="row">
@@ -229,7 +229,7 @@
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <label for="inputYear">Gender</label>
-                                        <select name="gender" id="inputYear" class="form-control">
+                                        <select name="sex" id="inputYear" class="form-control">
                                             <option selected>Choose...</option>
                                             <option>Male</option>
                                             <option>Female</option>
@@ -245,7 +245,7 @@
                                     <input type="password" name="confirmpassword" class="form-control" id="confirm-password" >
                                 </div>
                                 <div class="form-group">
-                                    <input type="button" id="register"class="form-control btn btn-primary" value="Register">
+                                    <input type="submit" id="register"class="form-control btn btn-primary" value="Register">
                                 </div>
                                 <input type="hidden" name="type" value="lab">
                             </form> 
@@ -267,7 +267,7 @@
 
 
                         <div class="tab-pane fade" id="doctor" role="tabpanel" aria-labelledby="doctor-tab">
-                                <form class=" signin">
+                                <form class=" signin" action="doctor" method="post">
                                         <div class="form-group">
                                             <label for="login">Name</label>
                                             <div class="row">
@@ -451,7 +451,7 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <label for="inputYear">Gender</label>
-                                                <select name="gender" id="inputYear" class="form-control">
+                                                <select name="sex" id="inputYear" class="form-control">
                                                     <option selected>Choose...</option>
                                                     <option>Male</option>
                                                     <option>Female</option>
@@ -471,7 +471,7 @@
                                             <input type="password" name="confirmpassword" class="form-control" id="confirm-password" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="button" id="register"class="form-control btn btn-primary" value="Register">
+                                            <input type="submit" id="register"class="form-control btn btn-primary" value="Register">
                                         </div>
                                         <input type="hidden" name="type" value="doctor">
                                     </form> 
@@ -490,7 +490,7 @@
 
 
                         <div class="tab-pane fade" id="lab" role="tabpanel" aria-labelledby="lab-tab">
-                                <form class=" signin">
+                                <form class=" signin" action="lab" method="post">
                                         <div class="form-group">
                                             <label for="login">Name</label>
                                             <div class="row">
@@ -674,7 +674,7 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <label for="inputYear">Gender</label>
-                                                <select name="gender" id="inputYear" class="form-control">
+                                                <select name="sex" id="inputYear" class="form-control">
                                                     <option selected>Choose...</option>
                                                     <option>Male</option>
                                                     <option>Female</option>
@@ -694,7 +694,7 @@
                                             <input type="password" name="confirmpassword" class="form-control" id="confirm-password" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="button" id="register"class="form-control btn btn-primary" value="Register">
+                                            <input type="submit" id="register"class="form-control btn btn-primary" value="Register">
                                         </div>
                                         <input type="hidden" name="type" value="lab">
                                     </form> 

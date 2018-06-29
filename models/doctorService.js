@@ -1,12 +1,12 @@
 let database = require('./../configuration/database')
 
-let GET_DOCTOR_QUERY = "SELECT * FROM DoctorAccount"
+let GET_DOCTOR_QUERY = "SELECT * FROM AccountDoctor"
 
-let GET_ONE_DOCTOR_QUERY = "SELECT * FROM DoctorAccount WHERE doctor_id = ?"
+let GET_ONE_DOCTOR_QUERY = "SELECT * FROM AccountDoctor WHERE doctor_id = ?"
 
-let INSERT_DOCTOR_QUERY = "INSERT INTO DoctorAccount " +
-                    "(firstName, lastName, username, password, birthdate, + "
-                    + "sex, workplace, type) VALUES (?, ?, ?, ?, ?, ?, ?)"	
+let INSERT_DOCTOR_QUERY = "INSERT INTO AccountDoctor " +
+                    "(firstName, lastName, username, password, birthdate,"
+                    + "sex, workplace, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"	
 
 module.exports.createDoctor = function (data, next) {
     let db = database.getDBInstance()
