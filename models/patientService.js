@@ -8,6 +8,23 @@ let INSERT_PATIENT_QUERY = "INSERT INTO AccountPatient " +
                     "(firstName, lastName, username, password, birthdate, "
                     + "sex, bloodType, accountNumber, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
+let GET_PATIENT_ID_QUERY = "SELECT patient_id FROM AccountPatient AS ap WHERE ap.firstName = ? AND ap.lastName = ?"
+
+module.exports.getPatientId = function (data, next) {
+    let db = database.getDBInstance()
+    db.all(GET_PATIENT_ID_QUERY, 
+        [data.firstName, data.lastName], 
+        function(error, rows) {
+        if (error) { 
+            console.log("err")
+            return next({status: 'error', data: error})
+        }
+        if (rows.length == 0)
+            return next({status: 'error', data: undefined})
+        next({status: 'success', data: rows[0]})
+    })
+}
+
 module.exports.createPatient = function (data, next) {
     let db = database.getDBInstance()
     db.run(INSERT_PATIENT_QUERY, 

@@ -24,15 +24,24 @@
                 <div class="col-md-4 page-content">
                     <h1>Add Record</h1>
                     <hr>
-                    <form class=" signin h-100" action="/upload" method = "post">
+                    <form class=" signin h-100" action="upload" method = "post">
                         <div class="form-group">
                             <label for="login">Patient Name</label>
-                            <input type="text" class="form-control" id="login" placeholder="Patient Name" name="email">
+                            <input type="text" class="form-control" id="login" placeholder="First Name" name="firstName" style="margin-bottom: 5px">
+                            <input type="text" class="form-control" id="login" placeholder="Last Name" name="lastName">
+                                    <label for="inputTestType" style="margin-top: 5px">Test Type</label>
+                                    <select name = "testType" id="inputTestType" class="form-control">
+                                        <option selected>X-ray</option>
+                                        <option>Drug Test</option>
+                                        <option>Blood Test</option>
+                                        <option>Blood Pressure</option>
+                                        <option>Dental Examination</option>
+                                    </select>
                         </div>
                         <div class="form-row">
                         <div class="form-group col-md-5">
                                 <label for="inputMonth">Month</label>
-                                <select id="inputMonth" class="form-control">
+                                <select name = "month" id="inputMonth" class="form-control">
                                     <option selected>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -49,7 +58,7 @@
                         </div>
                         <div class="form-group col-md-3">
                                 <label for="inputDay">Day</label>
-                                <select id="inputDay" class="form-control">
+                                <select name = "day" id="inputDay" class="form-control">
                                     <option selected value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -85,7 +94,7 @@
                         </div>
                         <div class="form-group col-md-4">
                                 <label for="inputYear">Year</label>
-                                <select id="inputYear" class="form-control">
+                                <select name="year" id="inputYear" class="form-control">
                                     <option value="1918">1918</option>
                                     <option value="1919">1919</option>
                                     <option value="1920">1920</option>
@@ -192,7 +201,7 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group mb-3">
-                                    <input type="file" name="file">
+                                    <input name="attachment" type="file" name="file">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="inputGroupFile02">
                                 </div>
@@ -201,6 +210,8 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label>Findings</label>
+                            <input type="text" class="form-control" id="login" placeholder="Enter finding..." name="findings" style="margin-bottom: 10px">
                             <input type="submit" class="form-control btn btn-primary" value="Submit">
                         </div>
                     </form>
