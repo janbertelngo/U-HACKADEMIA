@@ -17,7 +17,7 @@ module.exports.controller = function (app) {
 
         doctorService.createDoctor(doctor, function(data){
             console.log(data)
-            res.send(data)
+            res.redirect('index')
         })
     })
 }

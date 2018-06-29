@@ -15,7 +15,7 @@ module.exports.controller = function (app) {
 
         labService.createLab(lab, function(data){
             console.log(data)
-            res.send(data)
+            res.redirect('index')
         })
     })
 }

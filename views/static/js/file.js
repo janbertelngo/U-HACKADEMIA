@@ -8,7 +8,8 @@ $(document).ready(function(){
             lastName: $("#login1").val(),
             testType: $("#inputTestType").val(),
             findings: $("#login2").val(),
-            date: $("#inputYear").val()+"-"+$("#inputMonth").val()+"-"+$("#inputDay").val()
+            date: $("#inputYear").val()+"-"+$("#inputMonth").val()+"-"+$("#inputDay").val(),
+            file: $("#fileAttach").val()
         }).then(resp =>{
             if(resp) {
                 this.submit()

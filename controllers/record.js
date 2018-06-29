@@ -10,7 +10,7 @@ module.exports.controller = function (app) {
         console.log("HERE")
         var record = {
             testType: req.body.testType,
-            attachment: req.body.attachment,
+            attachment: req.body.file,
             findings: req.body.findings,
             date: req.body.date
         }
