@@ -4,7 +4,8 @@ $(document).ready(function(){
         console.log(resp)
         $(".user-name").text(resp.data.firstName + " " + resp.data.lastName);
         $(".user-age").text(resp.data);
-        $(".user-birthday").text(resp.data.birthday);
+        $(".user-birthday").text(resp.data.birthdate);
+        $('.user-gender').html(resp.data.sex);
     })
 
     axios.get("/records").then(resp => {
