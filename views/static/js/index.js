@@ -5,8 +5,9 @@ $(document).ready(function(){
         $(".user-name").text(resp.data.firstName + " " + resp.data.lastName);
         $(".user-age").text(resp.data);
         $(".user-birthday").text(resp.data.birthday);
-        console.log(resp.data.gender);
-        $(".user-gender").text(resp.data.gender);
+        $(".user-gender").text(resp.data.sex);
+        $('title').html(resp.data.firstName)
+        $(".user-image-container").html("<img class'user-image' src='/img/"+resp.data.sex.toLowerCase()+".png' width='140' height='140' alt=''> ");
     })
 
     axios.get("/records").then(resp => {

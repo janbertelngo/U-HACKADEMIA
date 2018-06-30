@@ -8,9 +8,11 @@ for(var i = 1; i <=31; i++) {
 }
 
 $(".nav-link").on("click", function() {
-    var role = this.id.split("-")[0];
+    var role = this.id.split("-")[0]
     console.log(role)
-    $('.role').val(role);
-    $('.workplace').css("display", role == "patient" ? "none" : "block");
+    $('.role').val(role)
+    $('.workplace').css("display", role == "patient" ? "none" : "block")
+    $('.signin').attr("action", role)
+    $('.workplace').prop('required', role == "patient" ? false : true)
     
 });
