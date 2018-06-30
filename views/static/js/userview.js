@@ -16,7 +16,5 @@ function populateFinding(jsonArray) {
         $('.finding-content').append(string);
     }
 
-    
-
         
 }
