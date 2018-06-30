@@ -94,7 +94,7 @@ app.post(
             recordService.getRecord({pID: req.session.uid, rID: recordID}, function(patient){
                 console.log("AHHHH")
                 console.log(patient.data)
-                res.send(patient.data)
+                res.render(*view*,{data:patient.data})
             })
         }
     })
