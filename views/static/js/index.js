@@ -18,12 +18,13 @@ $(document).ready(function(){
 
             var findings = item.findings;
             var date = item.date;
+            var id = item.record_id;
             var splitAttachment = item.attachment.split("\\");
             var attachment = splitAttachment[splitAttachment.length - 1];
 
             console.log(attachment)
 
-            var string = "<hr><div class='row'><img src='/uploaded/"+attachment+"' width='10%' height='10%'/><div class='col'><div class='row col'><h6 class='finding'>"+findings+"</h6></div><div class='row col'><p class='date'>"+date +"</p></div></div></div>"
+            var string = "<hr><div class='row list'><form action='record' method='PUT'><input name='pID' type='hidden' value='"+id+"'></form><img src='/uploaded/"+attachment+"' width='10%' height='10%'/><div class='col'><div class='row col'><h6 class='finding'>"+findings+"</h6></div><div class='row col'><p class='date'>"+date +"</p></div></div></div>"
             $('.finding-content').append(string);
         }
     })
@@ -33,4 +34,10 @@ $(document).ready(function(){
     ).then(resp =>{
         console.log(resp)
     })
+
+    
 })
+
+$(".list").on('click', function() {
+    this.find('form').submit();
+});
