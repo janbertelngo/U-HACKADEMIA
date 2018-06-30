@@ -21,9 +21,7 @@ module.exports.controller = function (app) {
         }, function (data){
             if(data.status == "success"){
                 record ["patient_id"] = data.data.patient_id
-                console.log(record)
                 recordService.createRecord(record, function(data){
-                    console.log(data)
                     return res.send(true)
                 })
             }
@@ -83,7 +81,18 @@ app.post(
     app.get("/records", function(req, res){
         if(req.session.type == "patient") {
             recordService.getAllRecords(req.session.uid, function(patient){
-                console.log(patient)
+                res.send(patient.data)
+            })
+        }
+    })
+
+    app.put("/record", function(req, res){
+        let recordID = req.body.rID
+        console.log("rec"+recordID)
+        console.log("params"+   req.params)
+        if(req.session.type == "patient") {
+            recordService.getRecord({pID: req.session.uid, rID: recordID}, function(patient){
+                console.log("AHHHH")
                 console.log(patient.data)
                 res.send(patient.data)
             })

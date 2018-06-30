@@ -38,13 +38,13 @@ module.exports.getAllRecords = function (data, next) {
                     
 module.exports.getRecord = function (data, next) {
     let db = database.getDBInstance()
-    db.all(GET_ONE_PATIENT_RECORD_QUERY, [data], function(error, rows) {
+    db.all(GET_ONE_PATIENT_RECORD_QUERY, [data.pID, data.rID], function(error, rows) {
         if (error) { 
             console.log("err")
             return next({status: 'error', data: error})
         }
         if (rows.length == 0)
-            return next({status: 'success', data: undefined})
+            return next({status: 'error', data: undefined})
         next({status: 'success', data: rows[0]})
     })
 }

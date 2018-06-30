@@ -25,4 +25,10 @@ $(document).ready(function(){
             $('.finding-content').append(string);
         }
     })
+
+    axios.put("/record", 
+       {rID: 1/*get record ID from the clicked findings*/}
+    ).then(resp =>{
+        console.log(resp)
+    })
 })
