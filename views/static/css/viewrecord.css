@@ -1,0 +1,21 @@
+:root {
+    --light-gray: rgb(248, 248, 248);
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(rgb(0,0,0,.6),rgba(0,0,0,.6)), url('../img/bg.png') no-repeat center center fixed;
+}
+
+.navbar {
+    box-shadow: 0 3px 5px -3px rgba(0,0,0,.5);
+}
+
+.record-panel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--light-gray);
+    padding: 20px;  
+}

@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    
+    $(document.body).on('click','.choices', function() {
+        console.log("clicked")
+        $('.choices').find('form').submit();
+        
+    });
     console.log("ha")
     axios.get("/user").then(resp =>{
         console.log(resp)
@@ -24,20 +30,16 @@ $(document).ready(function(){
 
             console.log(attachment)
 
-            var string = "<hr><div class='row list'><form action='record' method='PUT'><input name='pID' type='hidden' value='"+id+"'></form><img src='/uploaded/"+attachment+"' width='10%' height='10%'/><div class='col'><div class='row col'><h6 class='finding'>"+findings+"</h6></div><div class='row col'><p class='date'>"+date +"</p></div></div></div>"
+            var string = "<hr><div class='row choices'><form action='viewRecord' method='post'><input name='rID' type='hidden' value='"+id+"'></form><img src='/uploaded/"+attachment+"' width='10%' height='10%'/><div class='col'><div class='row col'><h6 class='finding'>"+findings+"</h6></div><div class='row col'><p class='date'>"+date +"</p></div></div></div>"
             $('.finding-content').append(string);
         }
     })
 
-    axios.put("/record", 
-       {rID: 1/*get record ID from the clicked findings*/}
-    ).then(resp =>{
-        console.log(resp)
-    })
+    // axios.put("/record", 
+    //    {rID: 1/*get record ID from the clicked findings*/}
+    // ).then(resp =>{
+    //     console.log(resp)
+    // })
 
     
 })
-
-$(".list").on('click', function() {
-    this.find('form').submit();
-});

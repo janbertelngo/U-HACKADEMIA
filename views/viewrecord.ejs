@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/viewrecord.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" type="application/javascript"> </script>
+        
+        
+        
+        
+
+        <title> <%= user.lastName%> </title>
+
+        <!-- LIBRARIES -->
+        
+
+        <!-- FILES -->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/img/icon.png" width="30" height="30" alt="">
+            </a>
+            
+
+            <a class="nav-link" href="/">
+                Logout
+            </a>
+
+            
+        </nav>
+        <div class="container-fluid">
+            testType%
+            picture
+            findings
+            <div class="row justify-content-center">
+                <div class="col-md-8 record-panel">
+                    <div class="row">
+                        <div class="col">
+                            <h1>
+                                Type:&nbsp;<%= user.testType%>
+                            </h1>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>
+                                Name: &nbsp;<%= user.lastName%>,&nbsp;<%= user.firstName%>
+                            </h6>
+                        </div>
+                        <div class="col">
+                            <h6>
+                                Date: &nbsp;<%=user.date%>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Findings: &nbsp;<%=user.findings%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img class='attachment-img' src='/uploaded/<%=user.attachment%>' height="100%" width="100%" alt="">
+                        </div>
+                    </div>
+                    
+
+                </div>   
+
+
+                            
+            </div>
+        </div>
+        
+        <script src="lib/jquery-3.3.1.min.js" type="text/javascript"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/js/viewrecord.js"></script>
+
+        <!-- <script src="/js/index.js" type="text/javascript"></script> -->
+    </body>
+</html>

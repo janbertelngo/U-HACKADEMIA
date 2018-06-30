@@ -86,7 +86,7 @@ app.post(
         }
     })
 
-    app.put("/record", function(req, res){
+    app.post("/viewRecord", function(req, res){
         let recordID = req.body.rID
         console.log("rec"+recordID)
         console.log("params"+   req.params)
@@ -94,7 +94,12 @@ app.post(
             recordService.getRecord({pID: req.session.uid, rID: recordID}, function(patient){
                 console.log("AHHHH")
                 console.log(patient.data)
-                res.render(*view*,{data:patient.data})
+                var str= patient.data.attachment.split("\\")
+                var file = str[str.length-1]
+                patient.data.attachment=file
+                console.log(patient.data.attachment)
+                res.render("viewrecord",{user:patient.data})
+                //res.send(patient.data)
             })
         }
     })
