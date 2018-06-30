@@ -29,3 +29,8 @@ h1 {
 .header {
     padding-top: 10px;
 }
+
+
+.workplace {
+    display: none;
+}

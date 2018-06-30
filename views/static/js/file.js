@@ -18,3 +18,11 @@ $(document).ready(function(){
     
     })
 })
+
+for(var i = 2018 ; i >= 1950; i-- ) {
+    $("#inputYear").append("<option value='"+ i+ "'>" + i + "</option>");
+}
+
+for(var i = 1; i <=31; i++) {
+    $("#inputDay").append("<option value='"+ i+ "'>" + i + "</option>");
+}
