@@ -5,6 +5,8 @@ $(document).ready(function(){
         $(".user-name").text(resp.data.firstName + " " + resp.data.lastName);
         $(".user-age").text(resp.data);
         $(".user-birthday").text(resp.data.birthday);
+        console.log(resp.data.gender);
+        $(".user-gender").text(resp.data.gender);
     })
 
     axios.get("/records").then(resp => {

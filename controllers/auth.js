@@ -47,5 +47,8 @@ module.exports.controller = function (app) {
                 res.send(patient.data)
             })
         }
+        if(req.session.type=="doctor") {
+            
+        }
     })
 }
